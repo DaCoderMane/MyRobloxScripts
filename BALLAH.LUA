@@ -22,7 +22,7 @@ local Window = Fluent:CreateWindow({
     SubTitle = "by Polar Studios",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
-    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
+    Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
     Theme = "Amethyst",
     MinimizeKey = Enum.KeyCode.RightShift -- Used when theres no MinimizeKeybind
 })
@@ -178,6 +178,7 @@ local RejoinButton = Tabs.Info:AddButton({
         Title = "Discord",
         Description = "Copys the discord invite to your clipboard",
         Callback = function()
+            setclipboard("https://discord.gg/63pT8eeVkJ")
             local Request = syn and syn.request or request
             Request({
                 Url = "http://127.0.0.1:6463/rpc?v=1",
@@ -194,6 +195,11 @@ local RejoinButton = Tabs.Info:AddButton({
                     nonce = game.HttpService:GenerateGUID(false)
                 }),
             })
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Automatically joined discord, if it didn't work the link has been copied to your clipboard.",
+            Duration = 8
+        })
         end
     })
 end
