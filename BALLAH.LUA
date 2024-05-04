@@ -30,6 +30,8 @@ local Window = Fluent:CreateWindow({
 local Tabs = {
     Player = Window:AddTab({ Title = "Player", Icon = "user" }),
     Utilities = Window:AddTab({ Title = "Utilities", Icon = "settings" }),
+    PolarStudios = Window:AddTab({ Title = "Other Polar Scripts", Icon = "" }),
+    UniversalScripts = Window:AddTab({ Title = "Universal Scripts", Icon = "" }),
     Info = Window:AddTab({ Title = "Info", Icon = "info" })
 }
 
@@ -202,10 +204,46 @@ local RejoinButton = Tabs.Info:AddButton({
         })
         end
     })
+
+local RainAdminV1 = Tabs.PolarStudios:AddButton({
+        Title = "Polar Admin (PRISON LIFE)",
+        Description = "Executes Polar Admin (PRISON LIFE)",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/DaCoderMane/MyRobloxScripts/main/PolarAdminPRISONLIFE.lua"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Polar Admin (PRISON LIFE).",
+            Duration = 8
+        })
+        end
+    })
+
+local RainAdminV1 = Tabs.PolarStudios:AddButton({
+        Title = "Polar Admin (PRISON LIFE V3)",
+        Description = "Executes Polar Admin (PRISON LIFE V3)",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/DaCoderMane/MyRobloxScripts/main/PolarAdminPLV3.lua"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Polar Admin (PRISON LIFE V3)",
+            Duration = 8
+        })
+        end
+    })
+
+local InfiniteYeild = Tabs.UniversalScripts:AddButton({
+        Title = "Infinite Yeild",
+        Description = "Executes Infinite Yeild",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Infinite Yeild.",
+            Duration = 8
+        })
+        end
+    })
 end
-
-
-
 
 Fluent:Notify({
     Title = "Polar Admin",
