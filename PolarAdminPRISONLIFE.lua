@@ -76,7 +76,6 @@ local function CLoad(Team)
             elseif LocalPlayer.TeamColor.Name == "Bright blue" then
                 Remotes.TeamEvent:FireServer("Bright orange")
                 LocalPlayer.CharacterAppearanceLoaded:Wait()
-                NotifyLib.prompt('Polar Admin', 'Teamed to inmates.', 15)
             end
         end
         Remotes.TeamEvent:FireServer("Bright blue")
@@ -85,12 +84,10 @@ local function CLoad(Team)
             Remotes.TeamEvent:FireServer("Bright orange")
             LocalPlayer.CharacterAppearanceLoaded:Wait()
             nonosquare(LocalPlayer.Character.HumanoidRootPart, CriminalPad)
-            NotifyLib.prompt('Polar Admin', 'Teamed to criminals.', 15)
         else
             Remotes.TeamEvent:FireServer("Bright blue")
             LocalPlayer.CharacterAppearanceLoaded:Wait()
             nonosquare(LocalPlayer.Character.HumanoidRootPart, CriminalPad)
-            NotifyLib.prompt('Polar Admin', 'Teamed to criminals.', 15)
         end
     end
 end
@@ -310,12 +307,16 @@ local function ChatCommands(Messages)
     elseif FindCommand({"team", "t"}) then
         if Args[2] == "guard" then
             CLoad("Bright blue")
+            NotifyLib.prompt('Polar Admin', 'Teamed to guards (unless error).', 15)
         elseif Args[2] == "inmate" then
             CLoad("Bright orange")
+            NotifyLib.prompt('Polar Admin', 'Teamed to inmates.', 15)
         elseif Args[2] == "criminal" or Args[2] == "crim" then
             CLoad("Really red")
+            NotifyLib.prompt('Polar Admin', 'Teamed to criminal.', 15)
         elseif Args[2] == "neutral" then
             CLoad("Medium stone grey")
+            NotifyLib.prompt('Polar Admin', 'Teamed to neutral.', 15)
         else
             return
         end
