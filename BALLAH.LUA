@@ -8,12 +8,24 @@ local TeleportService = game:GetService("TeleportService")
 local StarterGui = game:GetService("StarterGui")
 local RunService = game:GetService("RunService")
 local Lighting = game:GetService("Lighting")
-local Version = loadstring("return 'V1.0'")()
 local Players = game:GetService("Players")
 local Debris = game:GetService("Debris")
 
 local player = Players.LocalPlayer
 local Noclip = false
+
+local function getVersion()
+    local versionURL = "https://pastebin.com/raw/9rEd9JiX" -- Replace with your version URL
+    local versionRequest = syn and syn.request or http_request or request -- Synapse, HTTP library, or HTTP service
+    local response = versionRequest({Url = versionURL, Method = "GET"})
+    if response and response.StatusCode == 200 then
+        return response.Body
+    else
+        return "Unknown" -- Return a default value if version retrieval fails
+    end
+end
+
+local Version = getVersion()
 
 local Options = Fluent.Options
 
@@ -32,6 +44,12 @@ local Tabs = {
     Utilities = Window:AddTab({ Title = "Utilities", Icon = "settings" }),
     PolarStudios = Window:AddTab({ Title = "Other Polar Scripts", Icon = "" }),
     UniversalScripts = Window:AddTab({ Title = "Universal Scripts", Icon = "" }),
+    BladeBall = Window:AddTab({ Title = "Blade Ball", Icon = "" }),
+    Arsenal = Window:AddTab({ Title = "Arsenal", Icon = "" }),
+    BloxFruits = Window:AddTab({ Title = "BloxFruits", Icon = "" }),
+    Dahood = Window:AddTab({ Title = "DaHood", Icon = "" }),
+    PrisonLife = Window:AddTab({ Title = "Prison Life", Icon = "" }),
+    PrisonLifeV3 = Window:AddTab({ Title = "Prison Life V3", Icon = "" }),
     Info = Window:AddTab({ Title = "Info", Icon = "info" })
 }
 
@@ -205,7 +223,7 @@ local RejoinButton = Tabs.Info:AddButton({
         end
     })
 
-local RainAdminV1 = Tabs.PolarStudios:AddButton({
+local PolarAdminV1POLARSCRIPTS = Tabs.PolarStudios:AddButton({
         Title = "Polar Admin (PRISON LIFE)",
         Description = "Executes Polar Admin (PRISON LIFE)",
         Callback = function()
@@ -218,7 +236,7 @@ local RainAdminV1 = Tabs.PolarStudios:AddButton({
         end
     })
 
-local RainAdminV1 = Tabs.PolarStudios:AddButton({
+local PolarAdminV3POLARSCRIPTS = Tabs.PolarStudios:AddButton({
         Title = "Polar Admin (PRISON LIFE V3)",
         Description = "Executes Polar Admin (PRISON LIFE V3)",
         Callback = function()
@@ -243,12 +261,142 @@ local InfiniteYeild = Tabs.UniversalScripts:AddButton({
         })
         end
     })
+
+local AutoParryFFJ = Tabs.BladeBall:AddButton({
+        Title = "AutoParry by FFJ",
+        Description = "Executes AutoParry",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/Loader.lua"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Auto Parry by FFJ.",
+            Duration = 8
+        })
+        end
+    })
+
+local AirHub = Tabs.Arsenal:AddButton({
+        Title = "Air Hub",
+        Description = "Executes Air Hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Air Hub.",
+            Duration = 8
+        })
+        end
+    })
+
+local LegHub = Tabs.Arsenal:AddButton({
+        Title = "LegHub",
+        Description = "Executes LegHub",
+        Callback = function()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/cris123452/my/main/cas'))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed LegHub.",
+            Duration = 8
+        })
+        end
+    })
+
+local MatsuneHub = Tabs.BloxFruits:AddButton({
+        Title = "Matsune Hub V2",
+        Description = "Executes Matsune Hub V2",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Yatsuraa/Yuri/main/Winterhub_V2.lua"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Matsune Hub V2.",
+            Duration = 8
+        })
+        end
+    })
+
+local Dimagx = Tabs.Dahood:AddButton({
+        Title = "Dimagx",
+        Description = "Executes Dimagx",
+        Callback = function()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/Dimag16/DimagX_NEW/main/dimagx', true))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Dimagx.",
+            Duration = 8
+        })
+        end
+    })
+
+local CapsLock = Tabs.Dahood:AddButton({
+        Title = "CapsLock",
+        Description = "Executes CapsLock",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/whoiscapslock/capslock/main/main", true))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed CapsLock.",
+            Duration = 8
+        })
+        end
+    })
+
+local Polakya = Tabs.Dahood:AddButton({
+        Title = "Polakya",
+        Description = "Executes Polakya",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/pixelheadx/Polakya/main/Bestscript.md"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Polakya.",
+            Duration = 8
+        })
+        end
+    })
+    
+local CapsLockCamlock = Tabs.Dahood:AddButton({
+        Title = "CapsLock Camlock",
+        Description = "Executes CapsLock Camlock",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/DaCoderMane/MyRobloxScripts/main/dahoodaimlock.lua"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed CapsLock Camlock.",
+            Duration = 8
+        })
+        end
+    })
+
+local PolarAdminV1PRISONLIFE = Tabs.PrisonLife:AddButton({
+        Title = "Polar Admin (PRISON LIFE)",
+        Description = "Executes Polar Admin (PRISON LIFE)",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/DaCoderMane/MyRobloxScripts/main/PolarAdminPRISONLIFE.lua"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Polar Admin (PRISON LIFE).",
+            Duration = 8
+        })
+        end
+    })
+
+local PolarAdminV3PRISONLIFEV3 = Tabs.PrisonLifeV3:AddButton({
+        Title = "Polar Admin (PRISON LIFE V3)",
+        Description = "Executes Polar Admin (PRISON LIFE V3)",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/DaCoderMane/MyRobloxScripts/main/PolarAdminPLV3.lua"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Polar Admin (PRISON LIFE V3)",
+            Duration = 8
+        })
+        end
+    })
 end
 
 Fluent:Notify({
     Title = "Polar Admin",
-    Content = "Key System Loaded",
-    SubContent = "Join the discord",
+    Content = "Polar Admin Loaded!!",
+    SubContent = "Join the discord!",
     Duration = 8
 })
 
