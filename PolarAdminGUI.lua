@@ -190,7 +190,7 @@ local RejoinButton = Tabs.Utilities:AddButton({
         end
     })
 
-local RejoinButton = Tabs.Info:AddButton({
+local CopyDiscordNJoinDiscord = Tabs.Info:AddButton({
         Title = "Discord",
         Description = "Copys the discord invite to your clipboard",
         Callback = function()
@@ -440,7 +440,7 @@ local RejoinButton = Tabs.Utilities:AddButton({
         end
     })
 
-local RejoinButton = Tabs.Info:AddButton({
+local CopyDiscordNJoinDiscord = Tabs.Info:AddButton({
         Title = "Discord",
         Description = "Copys the discord invite to your clipboard",
         Callback = function()
@@ -690,7 +690,7 @@ local RejoinButton = Tabs.Utilities:AddButton({
         end
     })
 
-local RejoinButton = Tabs.Info:AddButton({
+local CopyDiscordNJoinDiscord = Tabs.Info:AddButton({
         Title = "Discord",
         Description = "Copys the discord invite to your clipboard",
         Callback = function()
@@ -953,7 +953,7 @@ local RejoinButton = Tabs.Utilities:AddButton({
         end
     })
 
-local RejoinButton = Tabs.Info:AddButton({
+local CopyDiscordNJoinDiscord = Tabs.Info:AddButton({
         Title = "Discord",
         Description = "Copys the discord invite to your clipboard",
         Callback = function()
@@ -1203,7 +1203,7 @@ local RejoinButton = Tabs.Utilities:AddButton({
         end
     })
 
-local RejoinButton = Tabs.Info:AddButton({
+local CopyDiscordNJoinDiscord = Tabs.Info:AddButton({
         Title = "Discord",
         Description = "Copys the discord invite to your clipboard",
         Callback = function()
@@ -1492,7 +1492,7 @@ local RejoinButton = Tabs.Utilities:AddButton({
         end
     })
 
-local RejoinButton = Tabs.Info:AddButton({
+local CopyDiscordNJoinDiscord = Tabs.Info:AddButton({
         Title = "Discord",
         Description = "Copys the discord invite to your clipboard",
         Callback = function()
@@ -1742,7 +1742,7 @@ local RejoinButton = Tabs.Utilities:AddButton({
         end
     })
 
-local RejoinButton = Tabs.Info:AddButton({
+local CopyDiscordNJoinDiscord = Tabs.Info:AddButton({
         Title = "Discord",
         Description = "Copys the discord invite to your clipboard",
         Callback = function()
@@ -1807,8 +1807,8 @@ Fluent:Notify({
 
 Fluent:Notify({
     Title = "Polar Admin (Universal)",
-    Content = "If your sliding around in your game, mess with the hipheight, it usually breaks in some games.",
-    Duration = 8
+    Content = "If your sliding around in your game, mess with the hipheight, it usually breaks in some games!!!",
+    Duration = 60
 })
 
 SaveManager:LoadAutoloadConfig()
