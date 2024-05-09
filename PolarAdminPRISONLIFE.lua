@@ -306,16 +306,12 @@ local function ChatCommands(Messages)
         CLoad(LocalPlayer.TeamColor.Name)
     elseif FindCommand({"team", "t"}) then
         if Args[2] == "guard" then
-            NotifyLib.prompt('Polar Admin', 'Teamed to guards (unless error).', 15)
             CLoad("Bright blue")
         elseif Args[2] == "inmate" then
-            NotifyLib.prompt('Polar Admin', 'Teamed to inmates.', 15)
             CLoad("Bright orange")
         elseif Args[2] == "criminal" or Args[2] == "crim" then
-            NotifyLib.prompt('Polar Admin', 'Teamed to criminal.', 15)
             CLoad("Really red")
         elseif Args[2] == "neutral" then
-            NotifyLib.prompt('Polar Admin', 'Teamed to neutral.', 15)
             CLoad("Medium stone grey")
         else
             return
