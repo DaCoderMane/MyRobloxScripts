@@ -245,6 +245,19 @@ local ChatSpy = Tabs.UniversalScripts:AddButton({
         end
     })
 
+local ChatBypasser = Tabs.UniversalScripts:AddButton({
+        Title = "Vadrifts Chat Bypasser",
+        Description = "Executes Vadrifts Chat Bypasser",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LSB4KRS/main/Loader"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Vadrifts Chat Bypasser.",
+            Duration = 8
+        })
+        end
+    })
+
 local PolarAdminV1PRISONLIFE = Tabs.PrisonLife:AddButton({
         Title = "Polar Admin ChatCMD",
         Description = "Executes Polar Admin ChatCMD",
@@ -477,6 +490,19 @@ local InfiniteYeild = Tabs.UniversalScripts:AddButton({
             Fluent:Notify({
             Title = "Polar Admin",
             Content = "Executed Infinite Yeild.",
+            Duration = 8
+        })
+        end
+    })
+
+local ChatBypasser = Tabs.UniversalScripts:AddButton({
+        Title = "Vadrifts Chat Bypasser",
+        Description = "Executes Vadrifts Chat Bypasser",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LSB4KRS/main/Loader"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Vadrifts Chat Bypasser.",
             Duration = 8
         })
         end
@@ -745,6 +771,19 @@ local ChatSpy = Tabs.UniversalScripts:AddButton({
         end
     })
 
+local ChatBypasser = Tabs.UniversalScripts:AddButton({
+        Title = "Vadrifts Chat Bypasser",
+        Description = "Executes Vadrifts Chat Bypasser",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LSB4KRS/main/Loader"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Vadrifts Chat Bypasser.",
+            Duration = 8
+        })
+        end
+    })
+
 local AirHub = Tabs.Arsenal:AddButton({
         Title = "Air Hub",
         Description = "Executes Air Hub",
@@ -1008,6 +1047,19 @@ local ChatSpy = Tabs.UniversalScripts:AddButton({
         end
     })
 
+local ChatBypasser = Tabs.UniversalScripts:AddButton({
+        Title = "Vadrifts Chat Bypasser",
+        Description = "Executes Vadrifts Chat Bypasser",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LSB4KRS/main/Loader"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Vadrifts Chat Bypasser.",
+            Duration = 8
+        })
+        end
+    })
+
 local MatsuneHub = Tabs.BloxFruits:AddButton({
         Title = "Matsune Hub V2",
         Description = "Executes Matsune Hub V2",
@@ -1253,6 +1305,19 @@ local ChatSpy = Tabs.UniversalScripts:AddButton({
             Fluent:Notify({
             Title = "Polar Admin",
             Content = "Executed Chat Spy.",
+            Duration = 8
+        })
+        end
+    })
+
+local ChatBypasser = Tabs.UniversalScripts:AddButton({
+        Title = "Vadrifts Chat Bypasser",
+        Description = "Executes Vadrifts Chat Bypasser",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LSB4KRS/main/Loader"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Vadrifts Chat Bypasser.",
             Duration = 8
         })
         end
@@ -1547,6 +1612,19 @@ local ChatSpy = Tabs.UniversalScripts:AddButton({
         end
     })
 
+local ChatBypasser = Tabs.UniversalScripts:AddButton({
+        Title = "Vadrifts Chat Bypasser",
+        Description = "Executes Vadrifts Chat Bypasser",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LSB4KRS/main/Loader"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Vadrifts Chat Bypasser.",
+            Duration = 8
+        })
+        end
+    })
+
 local PolarAdminV3PRISONLIFEV3 = Tabs.PrisonLifeV3:AddButton({
         Title = "Polar Admin ChatCMDS",
         Description = "Executes Polar Admin ChatCMDS",
@@ -1792,6 +1870,19 @@ local ChatSpy = Tabs.UniversalScripts:AddButton({
             Fluent:Notify({
             Title = "Polar Admin",
             Content = "Executed Chat Spy.",
+            Duration = 8
+        })
+        end
+    })
+
+local ChatBypasser = Tabs.UniversalScripts:AddButton({
+        Title = "Vadrifts Chat Bypasser",
+        Description = "Executes Vadrifts Chat Bypasser",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LSB4KRS/main/Loader"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Vadrifts Chat Bypasser.",
             Duration = 8
         })
         end
