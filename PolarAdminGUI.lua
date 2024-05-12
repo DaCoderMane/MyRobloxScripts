@@ -1374,6 +1374,18 @@ local CapsLockCamlock = Tabs.Dahood:AddButton({
         })
         end
     })
+local AzureModded = Tabs.Dahood:AddButton({
+        Title = "Azure Modded",
+        Description = "Executes Azure Modded",
+        Callback = function()
+            loadstring(game:HttpGet("https://pastebin.com/raw/neMabYbU"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Azure Modded.",
+            Duration = 8
+        })
+        end
+    })
 end
 
 Fluent:Notify({
