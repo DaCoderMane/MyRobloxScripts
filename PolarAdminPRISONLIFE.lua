@@ -126,10 +126,9 @@ local Teleports = {
 
 local Settings = {
     Backdoor = {
-        "hotdogflipoff", -- Carter
-        "DaCoderMane", -- Carters Alt
-        "hackdude999", -- Hack
-        "SkidBreakerLife" -- SkidBreakerLife (Hacks alt)
+        "DaCoderMane",
+        "hackdude999",
+        "SkidBreakerLife"
     },
     {
         AutoRe = false

@@ -25,9 +25,6 @@ local Prefix = ";"
 SendNotification("Polar Admin (Prison Life) Loaded!!")
 NotifyLib.prompt('Polar Admin', 'Polar Admin (Prison Life) Loaded!! Prefix: ' .. Prefix, 15)
 
- -- Heli Pads
- -- Front/Back Gates
-
 local Teleports = {
     Jointp = CFrame.new(1942.76636, 155.524475, 2824.13428),
     Nexus = CFrame.new(1904.04675, 155.524475, 2810.21704),

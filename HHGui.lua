@@ -1,4 +1,3 @@
--- Instances:
 local ScreenGui = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local ManeFrameUIC = Instance.new("UICorner")
@@ -8,7 +7,6 @@ local SetHHUIC = Instance.new("UICorner")
 local HHNUM = Instance.new("TextBox")
 local HHNUMUIC = Instance.new("UICorner")
 
--- Properties:
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 ScreenGui.ResetOnSpawn = false
@@ -68,7 +66,6 @@ HipHeightLabel.Text = "Hip Height"
 HipHeightLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 HipHeightLabel.TextSize = 14.000
 
--- Function to make the UI draggable:
 local dragging = false
 local dragInput
 local dragStart
@@ -104,8 +101,6 @@ game:GetService("UserInputService").InputChanged:Connect(function(input)
         update(input)
     end
 end)
-
--- Function to set Hip Height:
 
 local function setHipHeight()
     local num = tonumber(HHNUM.Text)

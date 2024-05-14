@@ -74,8 +74,8 @@ do
         Title = "Walkspeed",
         Default = "",
         Placeholder = "16",
-        Numeric = true, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
+        Numeric = true,
+        Finished = false,
         Callback = function(WalkSpeedTXT)
             local walkspeedNUM = tonumber(WalkSpeedTXT)
             WalkSpeedSlider:SetValue(walkspeedNUM or 16)
@@ -101,8 +101,8 @@ do
         Title = "Jumppower",
         Default = "",
         Placeholder = "50",
-        Numeric = true, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
+        Numeric = true,
+        Finished = false,
         Callback = function(JumpPowerTXT)
             local jumppowerNUM = tonumber(JumpPowerTXT)
             JumpPowerSlider:SetValue(jumppowerNUM or 50)
@@ -128,8 +128,8 @@ do
         Title = "Hipheight",
         Default = "",
         Placeholder = "0",
-        Numeric = true, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
+        Numeric = true,
+        Finished = false,
         Callback = function(HipHeightTXT)
             local HipHeightNUM = tonumber(HipHeightTXT)
             HipHeightSlider:SetValue(HipHeightNUM or 0)
@@ -295,13 +295,13 @@ elseif game.PlaceId == 13772394625 then
 local Noclip = false
 
 local Window = Fluent:CreateWindow({
-    Title = "Polar Admin (Blade Ball) " .. Version, -- Use the retrieved version information
+    Title = "Polar Admin (Blade Ball) " .. Version,
     SubTitle = "by Polar Studios",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
-    Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
+    Acrylic = false,
     Theme = "Amethyst",
-    MinimizeKey = Enum.KeyCode.RightShift -- Used when theres no MinimizeKeybind
+    MinimizeKey = Enum.KeyCode.RightShift
 })
 
 local Tabs = {
@@ -337,8 +337,8 @@ do
         Title = "Walkspeed",
         Default = "",
         Placeholder = "16",
-        Numeric = true, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
+        Numeric = true,
+        Finished = false,
         Callback = function(WalkSpeedTXT)
             local walkspeedNUM = tonumber(WalkSpeedTXT)
             WalkSpeedSlider:SetValue(walkspeedNUM or 16)
@@ -364,8 +364,8 @@ do
         Title = "Jumppower",
         Default = "",
         Placeholder = "50",
-        Numeric = true, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
+        Numeric = true,
+        Finished = false,
         Callback = function(JumpPowerTXT)
             local jumppowerNUM = tonumber(JumpPowerTXT)
             JumpPowerSlider:SetValue(jumppowerNUM or 50)
@@ -391,8 +391,8 @@ do
         Title = "Hipheight",
         Default = "",
         Placeholder = "0",
-        Numeric = true, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
+        Numeric = true,
+        Finished = false,
         Callback = function(HipHeightTXT)
             local HipHeightNUM = tonumber(HipHeightTXT)
             HipHeightSlider:SetValue(HipHeightNUM or 0)
@@ -558,13 +558,13 @@ elseif game.PlaceId == 286090429 then
 local Noclip = false
 
 local Window = Fluent:CreateWindow({
-    Title = "Polar Admin (Arsenal) " .. Version, -- Use the retrieved version information
+    Title = "Polar Admin (Arsenal) " .. Version,
     SubTitle = "by Polar Studios",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
-    Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
+    Acrylic = false,
     Theme = "Amethyst",
-    MinimizeKey = Enum.KeyCode.RightShift -- Used when theres no MinimizeKeybind
+    MinimizeKey = Enum.KeyCode.RightShift
 })
 
 local Tabs = {
@@ -600,8 +600,8 @@ do
         Title = "Walkspeed",
         Default = "",
         Placeholder = "16",
-        Numeric = true, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
+        Numeric = true,
+        Finished = false,
         Callback = function(WalkSpeedTXT)
             local walkspeedNUM = tonumber(WalkSpeedTXT)
             WalkSpeedSlider:SetValue(walkspeedNUM or 16)
@@ -627,8 +627,8 @@ do
         Title = "Jumppower",
         Default = "",
         Placeholder = "50",
-        Numeric = true, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
+        Numeric = true,
+        Finished = false,
         Callback = function(JumpPowerTXT)
             local jumppowerNUM = tonumber(JumpPowerTXT)
             JumpPowerSlider:SetValue(jumppowerNUM or 50)
@@ -654,8 +654,8 @@ do
         Title = "Hipheight",
         Default = "",
         Placeholder = "0",
-        Numeric = true, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
+        Numeric = true,
+        Finished = false,
         Callback = function(HipHeightTXT)
             local HipHeightNUM = tonumber(HipHeightTXT)
             HipHeightSlider:SetValue(HipHeightNUM or 0)
@@ -834,13 +834,13 @@ elseif game.PlaceId == 2753915549 then
 local Noclip = false
 
 local Window = Fluent:CreateWindow({
-    Title = "Polar Admin (Blox Fruits) " .. Version, -- Use the retrieved version information
+    Title = "Polar Admin (Blox Fruits) " .. Version,
     SubTitle = "by Polar Studios",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
-    Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
+    Acrylic = false,
     Theme = "Amethyst",
-    MinimizeKey = Enum.KeyCode.RightShift -- Used when theres no MinimizeKeybind
+    MinimizeKey = Enum.KeyCode.RightShift
 })
 
 local Tabs = {
@@ -876,8 +876,8 @@ do
         Title = "Walkspeed",
         Default = "",
         Placeholder = "16",
-        Numeric = true, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
+        Numeric = true,
+        Finished = false,
         Callback = function(WalkSpeedTXT)
             local walkspeedNUM = tonumber(WalkSpeedTXT)
             WalkSpeedSlider:SetValue(walkspeedNUM or 16)
@@ -903,8 +903,8 @@ do
         Title = "Jumppower",
         Default = "",
         Placeholder = "50",
-        Numeric = true, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
+        Numeric = true,
+        Finished = false,
         Callback = function(JumpPowerTXT)
             local jumppowerNUM = tonumber(JumpPowerTXT)
             JumpPowerSlider:SetValue(jumppowerNUM or 50)
@@ -930,8 +930,8 @@ do
         Title = "Hipheight",
         Default = "",
         Placeholder = "2.7",
-        Numeric = true, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
+        Numeric = true,
+        Finished = false,
         Callback = function(HipHeightTXT)
             local HipHeightNUM = tonumber(HipHeightTXT)
             HipHeightSlider:SetValue(HipHeightNUM or 2.7)
@@ -1097,13 +1097,13 @@ elseif game.PlaceId == 2788229376 then
 local Noclip = false
 
 local Window = Fluent:CreateWindow({
-    Title = "Polar Admin (Da Hood) " .. Version, -- Use the retrieved version information
+    Title = "Polar Admin (Da Hood) " .. Version,
     SubTitle = "by Polar Studios",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
-    Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
+    Acrylic = false,
     Theme = "Amethyst",
-    MinimizeKey = Enum.KeyCode.RightShift -- Used when theres no MinimizeKeybind
+    MinimizeKey = Enum.KeyCode.RightShift
 })
 
 local Tabs = {
@@ -1139,8 +1139,8 @@ do
         Title = "Walkspeed",
         Default = "",
         Placeholder = "16",
-        Numeric = true, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
+        Numeric = true,
+        Finished = false,
         Callback = function(WalkSpeedTXT)
             local walkspeedNUM = tonumber(WalkSpeedTXT)
             WalkSpeedSlider:SetValue(walkspeedNUM or 16)
@@ -1166,8 +1166,8 @@ do
         Title = "Jumppower",
         Default = "",
         Placeholder = "50",
-        Numeric = true, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
+        Numeric = true,
+        Finished = false,
         Callback = function(JumpPowerTXT)
             local jumppowerNUM = tonumber(JumpPowerTXT)
             JumpPowerSlider:SetValue(jumppowerNUM or 50)
@@ -1193,8 +1193,8 @@ do
         Title = "Hipheight",
         Default = "",
         Placeholder = "2",
-        Numeric = true, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
+        Numeric = true,
+        Finished = false,
         Callback = function(HipHeightTXT)
             local HipHeightNUM = tonumber(HipHeightTXT)
             HipHeightSlider:SetValue(HipHeightNUM or 2)
@@ -1411,13 +1411,13 @@ elseif game.PlaceId == 9332885675 then
 local Noclip = false
 
 local Window = Fluent:CreateWindow({
-    Title = "Polar Admin (Prison Life V3) " .. Version, -- Use the retrieved version information
+    Title = "Polar Admin (Prison Life V3) " .. Version,
     SubTitle = "by Polar Studios",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
-    Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
+    Acrylic = false,
     Theme = "Amethyst",
-    MinimizeKey = Enum.KeyCode.RightShift -- Used when theres no MinimizeKeybind
+    MinimizeKey = Enum.KeyCode.RightShift
 })
 
 local Tabs = {
@@ -1453,8 +1453,8 @@ do
         Title = "Walkspeed",
         Default = "",
         Placeholder = "16",
-        Numeric = true, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
+        Numeric = true,
+        Finished = false,
         Callback = function(WalkSpeedTXT)
             local walkspeedNUM = tonumber(WalkSpeedTXT)
             WalkSpeedSlider:SetValue(walkspeedNUM or 16)
@@ -1480,8 +1480,8 @@ do
         Title = "Jumppower",
         Default = "",
         Placeholder = "50",
-        Numeric = true, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
+        Numeric = true,
+        Finished = false,
         Callback = function(JumpPowerTXT)
             local jumppowerNUM = tonumber(JumpPowerTXT)
             JumpPowerSlider:SetValue(jumppowerNUM or 50)
@@ -1507,8 +1507,8 @@ do
         Title = "Hipheight",
         Default = "",
         Placeholder = "0",
-        Numeric = true, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
+        Numeric = true,
+        Finished = false,
         Callback = function(HipHeightTXT)
             local HipHeightNUM = tonumber(HipHeightTXT)
             HipHeightSlider:SetValue(HipHeightNUM or 0)
@@ -1675,13 +1675,13 @@ else
     print("Defaulting to Universal.")
 
 local Window = Fluent:CreateWindow({
-    Title = "Polar Admin (Universal) " .. Version, -- Use the retrieved version information
+    Title = "Polar Admin (Universal) " .. Version,
     SubTitle = "by Polar Studios",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
-    Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
+    Acrylic = false,
     Theme = "Amethyst",
-    MinimizeKey = Enum.KeyCode.RightShift -- Used when theres no MinimizeKeybind
+    MinimizeKey = Enum.KeyCode.RightShift
 })
 
 local Tabs = {
@@ -1716,8 +1716,8 @@ do
         Title = "Walkspeed",
         Default = "",
         Placeholder = "16",
-        Numeric = true, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
+        Numeric = true,
+        Finished = false,
         Callback = function(WalkSpeedTXT)
             local walkspeedNUM = tonumber(WalkSpeedTXT)
             WalkSpeedSlider:SetValue(walkspeedNUM or 16)
@@ -1743,8 +1743,8 @@ do
         Title = "Jumppower",
         Default = "",
         Placeholder = "50",
-        Numeric = true, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
+        Numeric = true,
+        Finished = false,
         Callback = function(JumpPowerTXT)
             local jumppowerNUM = tonumber(JumpPowerTXT)
             JumpPowerSlider:SetValue(jumppowerNUM or 50)
@@ -1770,8 +1770,8 @@ do
         Title = "Hipheight",
         Default = "",
         Placeholder = "0",
-        Numeric = true, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
+        Numeric = true,
+        Finished = false,
         Callback = function(HipHeightTXT)
             local HipHeightNUM = tonumber(HipHeightTXT)
             HipHeightSlider:SetValue(HipHeightNUM or 0)
