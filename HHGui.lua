@@ -1,3 +1,5 @@
+-- By me
+
 local ScreenGui = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local ManeFrameUIC = Instance.new("UICorner")

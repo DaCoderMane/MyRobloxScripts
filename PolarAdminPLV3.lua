@@ -1,3 +1,5 @@
+-- By me
+
 local NotifyLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhonshu/intro/main/ui"))()
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer

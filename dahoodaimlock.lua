@@ -1,3 +1,4 @@
+-- Not by me
 
 getgenv().Prediction = 0.15038
 getgenv().AimPart = "HumanoidRootPart"
