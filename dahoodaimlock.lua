@@ -8,15 +8,11 @@ getgenv().FOV = true
 getgenv().ShowFOV = false
 getgenv().FOVSize = 55
 
---// Variables (Service)
-
 local Players = game:GetService("Players")
 local RS = game:GetService("RunService")
 local WS = game:GetService("Workspace")
 local GS = game:GetService("GuiService")
 local SG = game:GetService("StarterGui")
-
---// Variables (regular)
 
 local LP = Players.LocalPlayer
 local Mouse = LP:GetMouse()
@@ -30,8 +26,6 @@ local Victim
 local SelectedKey = getgenv().Key
 local SelectedDisableKey = getgenv().DisableKey
 
---// Notification function
-
 function Notify(tx)
     SG:SetCore("SendNotification", {
         Title = "Cam Lock Enabled | .gg/thusky",
@@ -40,8 +34,6 @@ function Notify(tx)
     })
 end
 
---// Check if aimlock is loaded
-
 if getgenv().Loaded == true then
     Notify("Aimlock is already loaded!")
     return
@@ -49,16 +41,12 @@ end
 
 getgenv().Loaded = true
 
---// FOV Circle
-
 local fov = Drawing.new("Circle")
 fov.Filled = false
 fov.Transparency = 1
 fov.Thickness = 1
 fov.Color = Color3.fromRGB(255, 255, 0)
 fov.NumSides = 1000
-
---// Functions
 
 function update()
     if getgenv().FOV == true then
@@ -107,8 +95,6 @@ function getClosest()
     end
     return closestPlayer
 end
- 
---// Checks if key is down
 
 Mouse.KeyDown:Connect(function(k)
     SelectedKey = SelectedKey:lower()
@@ -135,8 +121,6 @@ Mouse.KeyDown:Connect(function(k)
         AimlockState = not AimlockState
     end
 end)
-
---// Loop update FOV and loop camera lock onto target
 
 RS.RenderStepped:Connect(function()
     update()
