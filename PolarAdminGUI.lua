@@ -15,13 +15,13 @@ local Options = Fluent.Options
 local Noclip = false
 
 local function getVersion()
-    local versionURL = "https://pastebin.com/raw/9rEd9JiX" -- Replace with your version URL
-    local versionRequest = syn and syn.request or http_request or request -- Synapse, HTTP library, or HTTP service
+    local versionURL = "https://pastebin.com/raw/9rEd9JiX"
+    local versionRequest = syn and syn.request or http_request or request 
     local response = versionRequest({Url = versionURL, Method = "GET"})
     if response and response.StatusCode == 200 then
         return response.Body
     else
-        return "Unknown" -- Return a default value if version retrieval fails
+        return "Unknown"
     end
 end
 
@@ -32,13 +32,13 @@ if game.PlaceId == 155615604 then
 local Noclip = false
 
 local Window = Fluent:CreateWindow({
-    Title = "Polar Admin (Prison Life) " .. Version, -- Use the retrieved version information
+    Title = "Polar Admin (Prison Life) " .. Version,
     SubTitle = "by Polar Studios",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
-    Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
+    Acrylic = false,
     Theme = "Amethyst",
-    MinimizeKey = Enum.KeyCode.RightShift -- Used when theres no MinimizeKeybind
+    MinimizeKey = Enum.KeyCode.RightShift
 })
 
 local Tabs = {
