@@ -1,4 +1,5 @@
 -- By me
+-- Kinda goated for arsenal NGL tho :>
 
 local ScreenGui = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
