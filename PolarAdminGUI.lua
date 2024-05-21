@@ -1,4 +1,4 @@
--- By me
+-- By Me
 
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
@@ -292,7 +292,7 @@ end)
 
 SaveManager:LoadAutoloadConfig()
 
-elseif game.PlaceId == 13772394625 then
+elseif game.PlaceId == 13772394625 or 15234596844 then
 
 local Noclip = false
 
