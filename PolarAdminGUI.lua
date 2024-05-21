@@ -800,13 +800,13 @@ local AirHub = Tabs.Arsenal:AddButton({
     })
 
 local LegHub = Tabs.Arsenal:AddButton({
-        Title = "LegHub",
-        Description = "Executes LegHub",
+        Title = "VG Hub",
+        Description = "Executes VG Hub",
         Callback = function()
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/cris123452/my/main/cas'))()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
             Fluent:Notify({
             Title = "Polar Admin",
-            Content = "Executed LegHub.",
+            Content = "Executed VG Hub.",
             Duration = 8
         })
         end
