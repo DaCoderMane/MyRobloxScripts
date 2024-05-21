@@ -1,5 +1,3 @@
--- By Me
-
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
@@ -292,7 +290,7 @@ end)
 
 SaveManager:LoadAutoloadConfig()
 
-elseif game.PlaceId == 13772394625 or 15234596844 then
+elseif game.PlaceId == 13772394625 or game.PlaceId == 15234596844 then
 
 local Noclip = false
 
@@ -800,13 +798,13 @@ local AirHub = Tabs.Arsenal:AddButton({
     })
 
 local LegHub = Tabs.Arsenal:AddButton({
-        Title = "VG Hub",
-        Description = "Executes VG Hub",
+        Title = "LegHub",
+        Description = "Executes LegHub",
         Callback = function()
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/cris123452/my/main/cas'))()
             Fluent:Notify({
             Title = "Polar Admin",
-            Content = "Executed VG Hub.",
+            Content = "Executed LegHub.",
             Duration = 8
         })
         end
