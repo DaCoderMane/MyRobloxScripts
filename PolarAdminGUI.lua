@@ -1,5 +1,3 @@
--- By Me
-
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
@@ -292,7 +290,7 @@ end)
 
 SaveManager:LoadAutoloadConfig()
 
-elseif game.PlaceId == 13772394625 or 15234596844 then
+elseif game.PlaceId == 13772394625 or game.PlaceId == 15234596844 then
 
 local Noclip = false
 
@@ -799,7 +797,7 @@ local AirHub = Tabs.Arsenal:AddButton({
         end
     })
 
-local VGHub = Tabs.Arsenal:AddButton({
+    local VGHub = Tabs.Arsenal:AddButton({
         Title = "VG Hub",
         Description = "Executes VG Hub",
         Callback = function()
