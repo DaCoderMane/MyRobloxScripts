@@ -13,6 +13,7 @@ local Debris = game:GetService("Debris")
 local player = Players.LocalPlayer
 local Options = Fluent.Options
 local Noclip = false
+setfpscap(5000);
 
 local function getVersion()
     local versionURL = "https://pastebin.com/raw/9rEd9JiX"
