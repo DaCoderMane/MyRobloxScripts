@@ -206,6 +206,7 @@ local function ChatCommands(Messages)
         print("-- Utilities --")
         print("cmds | Shows this message.")
         print("getcoords|coords | Copies the current RootParts CFrame values to your clipboard.")
+        print("fpscap <num> | Sets your fps-cap to the int provided.")
         -- Player
         print("-- Player --")
         print("walkspeed|speed|ws | Sets the players walkspeed.")
@@ -296,6 +297,9 @@ local function ChatCommands(Messages)
         LocalPlayer.Character.Torso.CanCollide = true;
         LocalPlayer.Character.Head.CanCollide = true
         NotifyLib.prompt('Polar Admin', 'Noclip enabled.', 15)
+    elseif FindCommand({"fpscap"}) then
+        setfpscap(Args[2]);
+        NotifyLib.prompt('Polar Admin', 'FPSCAP set to ' .. tonumber(Args[2]) .. '.', 15)
     elseif FindCommand({"clip"}) then
         Noclip = false
         LocalPlayer.Character.Torso.CanCollide = true;
