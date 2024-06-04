@@ -810,6 +810,18 @@ local AirHub = Tabs.Arsenal:AddButton({
         })
         end
     })
+    local LegHub = Tabs.Arsenal:AddButton({
+        Title = "Leg Hub",
+        Description = "Executes Leg Hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/cris123452/my/main/THE%20BEST%20SCRIPT%20ARSENAL"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Leg Hub.",
+            Duration = 8
+        })
+        end
+    })
 end
 
 Fluent:Notify({
