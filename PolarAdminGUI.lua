@@ -1399,6 +1399,18 @@ local AzureModded = Tabs.Dahood:AddButton({
         })
         end
     })
+local HexxiumWare = Tabs.Dahood:AddButton({
+        Title = "HexxiumWare",
+        Description = "Executes HexxiumWare",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/DaCoderMane/MyRobloxScripts/main/AimLoq.lua",true))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed HexxiumWare.",
+            Duration = 8
+        })
+        end
+    })
 end
 
 Fluent:Notify({
