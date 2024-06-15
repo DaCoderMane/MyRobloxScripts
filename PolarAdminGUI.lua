@@ -1411,6 +1411,18 @@ local HexxiumWare = Tabs.Dahood:AddButton({
         })
         end
     })
+    local MashHub = Tabs.Dahood:AddButton({
+        Title = "MashHub",
+        Description = "Executes MashHub",
+        Callback = function()
+            loadstring(game:HttpGet("https://pastebin.com/raw/C6R2XTGi"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed MashHub.",
+            Duration = 8
+        })
+        end
+    })
 end
 
 Fluent:Notify({
