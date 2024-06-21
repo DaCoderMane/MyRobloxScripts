@@ -1391,7 +1391,7 @@ local AzureModded = Tabs.Dahood:AddButton({
         Title = "Azure Modded",
         Description = "Executes Azure Modded",
         Callback = function()
-            loadstring(game:HttpGet("https://pastebin.com/raw/neMabYbU"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()
             Fluent:Notify({
             Title = "Polar Admin",
             Content = "Executed Azure Modded.",
