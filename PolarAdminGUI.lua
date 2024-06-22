@@ -1391,7 +1391,7 @@ local AzureModded = Tabs.Dahood:AddButton({
         Title = "Azure Modded",
         Description = "Executes Azure Modded",
         Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/DaCoderMane/MyRobloxScripts/main/azuremoddedredirect.lua"))()
             Fluent:Notify({
             Title = "Polar Admin",
             Content = "Executed Azure Modded.",
