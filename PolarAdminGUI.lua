@@ -1105,7 +1105,7 @@ end)
 
 SaveManager:LoadAutoloadConfig()
 
-elseif game.PlaceId == 2788229376 or game.PlaceId == 16033173781 then
+elseif game.PlaceId == 2788229376 or game.PlaceId == 16033173781 or game.PlaceId == 7213786345 then
 
 local Noclip = false
 
