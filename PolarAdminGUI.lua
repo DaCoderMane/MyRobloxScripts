@@ -1374,6 +1374,19 @@ local Polakya = Tabs.Dahood:AddButton({
         })
         end
     })
+
+local vortex = Tabs.Dahood:AddButton({
+        Title = "Vortex",
+        Description = "Executes Vortx",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/ImagineProUser/vortexdahood/main/vortex", true))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Vortex.",
+            Duration = 8
+        })
+        end
+    })
     
 local CapsLockCamlock = Tabs.Dahood:AddButton({
         Title = "CapsLock Camlock",
