@@ -1734,7 +1734,7 @@ local Window = Fluent:CreateWindow({
 local Tabs = {
     Utilities = Window:AddTab({ Title = "Utilities", Icon = "settings" }),
     UniversalScripts = Window:AddTab({ Title = "Universal Scripts", Icon = "" }),
-    apoc2 = Window:AddTab({ Title = "Hood Customs", Icon = "" }),
+    apoc2 = Window:AddTab({ Title = "Apocalypse Rising 2", Icon = "" }),
     Info = Window:AddTab({ Title = "Info", Icon = "info" })
 }
 
@@ -1815,7 +1815,7 @@ local InfiniteYeild = Tabs.UniversalScripts:AddButton({
         end
     })
 
-local AzureModded = Tabs.apoc2:AddButton({
+local ar2c = Tabs.apoc2:AddButton({
         Title = "Ar2c Mod Menu",
         Description = "Executes Ar2c Mod Menu",
         Callback = function()
