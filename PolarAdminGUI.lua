@@ -1719,6 +1719,134 @@ end)
 
 SaveManager:LoadAutoloadConfig()
 
+elseif game.PlaceId == 863266079 then
+
+local Window = Fluent:CreateWindow({
+    Title = "Polar Admin (Apocalypse Rising 2) " .. Version,
+    SubTitle = "by Polar Studios",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = false,
+    Theme = "Amethyst",
+    MinimizeKey = Enum.KeyCode.RightShift
+})
+
+local Tabs = {
+    Utilities = Window:AddTab({ Title = "Utilities", Icon = "settings" }),
+    UniversalScripts = Window:AddTab({ Title = "Universal Scripts", Icon = "" }),
+    apoc2 = Window:AddTab({ Title = "Hood Customs", Icon = "" }),
+    Info = Window:AddTab({ Title = "Info", Icon = "info" })
+}
+
+do
+local RejoinButton = Tabs.Utilities:AddButton({
+        Title = "Rejoin",
+        Description = "Rejoins the game",
+        Callback = function()
+            Window:Dialog({
+                Title = "Polar Admin",
+                Content = "Are you sure you want to rejoin?",
+                Buttons = {
+                    {
+                        Title = "Yes",
+                        Callback = function()
+                            Fluent:Notify({
+                            Title = "Polar Admin",
+                            Content = "Rejoining...",
+                            Duration = 8
+                        })
+                        TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, player)
+                        end
+                    },
+                    {
+                        Title = "No",
+                        Callback = function()
+                            Fluent:Notify({
+                            Title = "Polar Admin",
+                            Content = "Rejoin Canceled",
+                            Duration = 8
+                        })
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+local CopyDiscordNJoinDiscord = Tabs.Info:AddButton({
+        Title = "Discord",
+        Description = "Copys the discord invite to your clipboard",
+        Callback = function()
+            setclipboard("https://discord.gg/63pT8eeVkJ")
+            local Request = syn and syn.request or request
+            Request({
+                Url = "http://127.0.0.1:6463/rpc?v=1",
+                Method = "POST",
+                Headers = {
+                    ["Content-Type"] = "application/json",
+                    ["Origin"] = "https://discord.com"
+                },
+                Body = game.HttpService:JSONEncode({
+                    cmd = "INVITE_BROWSER",
+                    args = {
+                        code = "63pT8eeVkJ"
+                    },
+                    nonce = game.HttpService:GenerateGUID(false)
+                }),
+            })
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Automatically joined discord, if it didn't work the link has been copied to your clipboard.",
+            Duration = 8
+        })
+        end
+    })
+
+local InfiniteYeild = Tabs.UniversalScripts:AddButton({
+        Title = "Infinite Yeild",
+        Description = "Executes Infinite Yeild",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Infinite Yeild.",
+            Duration = 8
+        })
+        end
+    })
+
+local AzureModded = Tabs.apoc2:AddButton({
+        Title = "Ar2c Mod Menu",
+        Description = "Executes Ar2c Mod Menu",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/DaCoderMane/MyRobloxScripts/main/Apoc2.lua"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Ar2c Mod Menu.",
+            Duration = 8
+        })
+        end
+    })
+end
+
+Fluent:Notify({
+    Title = "Polar Admin (Apocalypse Rising 2)",
+    Content = "Polar Admin (Apocalypse Rising 2) Loaded!!",
+    SubContent = "Join the discord!",
+    Duration = 8
+})
+
+game:GetService("RunService").RenderStepped:Connect(function()
+    pcall(function()
+        if Noclip and player.Character then 
+            player.Character.Torso.CanCollide = false;
+            player.Character.Head.CanCollide = false
+        end
+    end)
+end)
+
+SaveManager:LoadAutoloadConfig()
+
 elseif game.PlaceId == 17720514390 then
 
 local Noclip = false
