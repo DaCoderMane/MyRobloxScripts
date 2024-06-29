@@ -65,7 +65,7 @@ local function updatePing()
     while runningPingUpdate do
         local currentTick = tick()
         local ping = (currentTick - lastTick) * 1000
-        Info.Text = "\n\nKuraWare\n——————————————————\nPing: " .. tostring(math.floor(ping)) .. " ms\nAimlock Key: " .. getgenv().Settings.AimKey .. "\n——————————————————"
+        Info.Text = "\n\nKuraWare\n——————————————————\nPing: " .. tostring(math.floor(ping)) .. " ms\nAimlock Key: '" .. getgenv().Settings.AimKey .. "'\nAim Radius: " .. getgenv().Settings.AimRadius .. "\nThird Person: " .. tostring(getgenv().Settings.ThirdPerson) .. "\nFirst Person: " .. tostring(getgenv().Settings.FirstPerson) .. "\nTeam Check: " .. tostring(getgenv().Settings.TeamCheck) .. "\nPredict Movement: " .. tostring(getgenv().Settings.PredictMovement) .. "\nPrediction Velocity: " .. getgenv().Settings.PredictionVelocity .. "\nCheck If Jumped: " .. tostring(getgenv().Settings.CheckIfJumped) .. "\nSmoothness: " .. tostring(getgenv().Settings.Smoothness) .. "\nSmoothness Amount: " .. getgenv().Settings.SmoothnessAmount .. "\n——————————————————"
         lastTick = currentTick
         wait(0.1)
     end
