@@ -77,15 +77,15 @@ spawn(updatePing)
 getgenv().OldAimPart = "HumanoidRootPart"
 getgenv().AimPart = "HumanoidRootPart" -- For R15 Games: {UpperTorso, LowerTorso, HumanoidRootPart, Head} | For R6 Games: {Head, Torso, HumanoidRootPart}  
     getgenv().AimlockKey = getgenv().Settings.AimKey
-    getgenv().AimRadius = 50 -- How far away from someones character you want to lock on at
-    getgenv().ThirdPerson = true 
-    getgenv().FirstPerson = true
-    getgenv().TeamCheck = false -- Check if Target is on your Team (True means it wont lock onto your teamates, false is vice versa) (Set it to false if there are no teams)
-    getgenv().PredictMovement = true -- Predicts if they are moving in fast velocity (like jumping) so the aimbot will go a bit faster to match their speed 
-    getgenv().PredictionVelocity = 6.612
-    getgenv().CheckIfJumped = true
-    getgenv().Smoothness = false
-    getgenv().SmoothnessAmount = 0.2
+    getgenv().AimRadius = getgenv().Settings.AimRadius
+    getgenv().ThirdPerson = getgenv().Settings.ThirdPerson
+    getgenv().FirstPerson = getgenv().Settings.FirstPerson
+    getgenv().TeamCheck = getgenv().Settings.TeamCheck
+    getgenv().PredictMovement = getgenv().Settings.PredictMovement
+    getgenv().PredictionVelocity = getgenv().Settings.PredictionVelocity
+    getgenv().CheckIfJumped = getgenv().Settings.CheckIfJumped
+    getgenv().Smoothness = getgenv().Settings.Smoothness
+    getgenv().SmoothnessAmount = getgenv().Settings.SmoothnessAmount
  
     local Players, Uis, RService, SGui = game:GetService"Players", game:GetService"UserInputService", game:GetService"RunService", game:GetService"StarterGui";
     local Client, Mouse, Camera, CF, RNew, Vec3, Vec2 = Players.LocalPlayer, Players.LocalPlayer:GetMouse(), workspace.CurrentCamera, CFrame.new, Ray.new, Vector3.new, Vector2.new;
