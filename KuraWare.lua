@@ -63,7 +63,7 @@ local function updatePing()
 	while true do
 		local currentTick = tick()
 		local ping = (currentTick - lastTick) * 1000
-		Info.Text = "\n\nKuraWare\n——————————————————\nPing: " .. tostring(math.floor(ping)) .. " ms\n——————————————————"
+		Info.Text = "\n\nKuraWare\n——————————————————\nPing: " .. tostring(math.floor(ping)) .. " ms\nAimlock Key: " .. getgenv().Settings.AimKey .. "\n——————————————————"
 		lastTick = currentTick
 		wait(0.1)
 	end
