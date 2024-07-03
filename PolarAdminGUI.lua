@@ -822,6 +822,18 @@ local AirHub = Tabs.Arsenal:AddButton({
         })
         end
     })
+    local AppleWare = Tabs.Arsenal:AddButton({
+        Title = "AppleWare",
+        Description = "Executes AppleWare",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/AppleWare/AppleWare/main/AppleWareLoader.lua"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed AppleWare.",
+            Duration = 8
+        })
+        end
+    })
 end
 
 Fluent:Notify({
