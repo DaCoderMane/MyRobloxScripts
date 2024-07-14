@@ -1361,6 +1361,19 @@ local Dimagx = Tabs.Dahood:AddButton({
         end
     })
 
+local DownFall = Tabs.Dahood:AddButton({
+        Title = "DownFall",
+        Description = "Executes DownFall (Resets your character on execute)",
+        Callback = function()
+            loadstring(game:HttpGet("https://downfall.lol/loader.lua"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed DownFall.",
+            Duration = 8
+        })
+        end
+    })
+
 local CapsLock = Tabs.Dahood:AddButton({
         Title = "CapsLock",
         Description = "Executes CapsLock",
