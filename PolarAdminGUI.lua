@@ -259,6 +259,19 @@ local ChatBypasser = Tabs.UniversalScripts:AddButton({
         end
     })
 
+local ChatBypasser2 = Tabs.UniversalScripts:AddButton({
+        Title = "Abyss | Chat Bypasser",
+        Description = "Executes Abyss | Chat Bypasser",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/DaCoderMane/MyRobloxScripts/main/ChatBypasser.lua"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Vadrifts Chat Bypasser.",
+            Duration = 8
+        })
+        end
+    })
+
 local PolarAdminV1PRISONLIFE = Tabs.PrisonLife:AddButton({
         Title = "Polar Admin ChatCMD",
         Description = "Executes Polar Admin ChatCMD",
@@ -501,6 +514,19 @@ local ChatBypasser = Tabs.UniversalScripts:AddButton({
         Description = "Executes Vadrifts Chat Bypasser",
         Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LSB4KRS/main/Loader"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Vadrifts Chat Bypasser.",
+            Duration = 8
+        })
+        end
+    })
+
+local ChatBypasser2 = Tabs.UniversalScripts:AddButton({
+        Title = "Abyss | Chat Bypasser",
+        Description = "Executes Abyss | Chat Bypasser",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/DaCoderMane/MyRobloxScripts/main/ChatBypasser.lua"))()
             Fluent:Notify({
             Title = "Polar Admin",
             Content = "Executed Vadrifts Chat Bypasser.",
@@ -777,6 +803,19 @@ local ChatBypasser = Tabs.UniversalScripts:AddButton({
         Description = "Executes Vadrifts Chat Bypasser",
         Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LSB4KRS/main/Loader"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Vadrifts Chat Bypasser.",
+            Duration = 8
+        })
+        end
+    })
+
+    local ChatBypasser2 = Tabs.UniversalScripts:AddButton({
+        Title = "Abyss | Chat Bypasser",
+        Description = "Executes Abyss | Chat Bypasser",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/DaCoderMane/MyRobloxScripts/main/ChatBypasser.lua"))()
             Fluent:Notify({
             Title = "Polar Admin",
             Content = "Executed Vadrifts Chat Bypasser.",
@@ -1085,6 +1124,19 @@ local ChatBypasser = Tabs.UniversalScripts:AddButton({
         end
     })
 
+local ChatBypasser2 = Tabs.UniversalScripts:AddButton({
+        Title = "Abyss | Chat Bypasser",
+        Description = "Executes Abyss | Chat Bypasser",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/DaCoderMane/MyRobloxScripts/main/ChatBypasser.lua"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Vadrifts Chat Bypasser.",
+            Duration = 8
+        })
+        end
+    })
+
 local MatsuneHub = Tabs.BloxFruits:AddButton({
         Title = "Matsune Hub V2",
         Description = "Executes Matsune Hub V2",
@@ -1343,6 +1395,33 @@ local ChatBypasser = Tabs.UniversalScripts:AddButton({
             Fluent:Notify({
             Title = "Polar Admin",
             Content = "Executed Vadrifts Chat Bypasser.",
+            Duration = 8
+        })
+        end
+    })
+
+local ChatBypasser2 = Tabs.UniversalScripts:AddButton({
+        Title = "Abyss | Chat Bypasser",
+        Description = "Executes Abyss | Chat Bypasser",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/DaCoderMane/MyRobloxScripts/main/ChatBypasser.lua"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Vadrifts Chat Bypasser.",
+            Duration = 8
+        })
+        end
+    })
+
+local Faded = Tabs.Dahood:AddButton({
+        Title = "Faded",
+        Description = "Executes Faded",
+        Callback = function()
+            _G.Toggles = "V"
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/NighterEpic/Faded/main/YesEpic", true))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Dimagx.",
             Duration = 8
         })
         end
@@ -1704,6 +1783,19 @@ local ChatBypasser = Tabs.UniversalScripts:AddButton({
         Description = "Executes Vadrifts Chat Bypasser",
         Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LSB4KRS/main/Loader"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Vadrifts Chat Bypasser.",
+            Duration = 8
+        })
+        end
+    })
+
+local ChatBypasser2 = Tabs.UniversalScripts:AddButton({
+        Title = "Abyss | Chat Bypasser",
+        Description = "Executes Abyss | Chat Bypasser",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/DaCoderMane/MyRobloxScripts/main/ChatBypasser.lua"))()
             Fluent:Notify({
             Title = "Polar Admin",
             Content = "Executed Vadrifts Chat Bypasser.",
@@ -2103,6 +2195,19 @@ local ChatBypasser = Tabs.UniversalScripts:AddButton({
         end
     })
 
+local ChatBypasser2 = Tabs.UniversalScripts:AddButton({
+        Title = "Abyss | Chat Bypasser",
+        Description = "Executes Abyss | Chat Bypasser",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/DaCoderMane/MyRobloxScripts/main/ChatBypasser.lua"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Vadrifts Chat Bypasser.",
+            Duration = 8
+        })
+        end
+    })
+
 local PolarAdminV3PRISONLIFEV3 = Tabs.PrisonLifeV3:AddButton({
         Title = "Polar Admin ChatCMDS",
         Description = "Executes Polar Admin ChatCMDS",
@@ -2358,6 +2463,18 @@ local ChatBypasser = Tabs.UniversalScripts:AddButton({
         Description = "Executes Vadrifts Chat Bypasser",
         Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LSB4KRS/main/Loader"))()
+            Fluent:Notify({
+            Title = "Polar Admin",
+            Content = "Executed Vadrifts Chat Bypasser.",
+            Duration = 8
+        })
+        end
+    })
+local ChatBypasser2 = Tabs.UniversalScripts:AddButton({
+        Title = "Abyss | Chat Bypasser",
+        Description = "Executes Abyss | Chat Bypasser",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/DaCoderMane/MyRobloxScripts/main/ChatBypasser.lua"))()
             Fluent:Notify({
             Title = "Polar Admin",
             Content = "Executed Vadrifts Chat Bypasser.",
