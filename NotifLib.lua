@@ -1,8 +1,9 @@
 -- Skid = gay nigger
 
+local AbyssNotifLib = {}
 local activeNotifications = {}
 
-function createNotification(titleText, messageText, autoDismissTime)
+function AbyssNotifLib:createNotification(titleText, messageText, autoDismissTime)
     local Notification = Instance.new("ScreenGui")
     local NotifFrame = Instance.new("Frame")
     local UIC = Instance.new("UICorner")
@@ -117,3 +118,5 @@ function createNotification(titleText, messageText, autoDismissTime)
         task.delay(autoDismissTime, dismissNotification)
     end
 end
+
+return AbyssNotifLib
