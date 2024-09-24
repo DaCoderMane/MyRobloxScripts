@@ -1,4 +1,4 @@
--- Skid = gay nigger
+-- Skid = dirty nigger
 
 local AbyssNotifLib = {}
 local activeNotifications = {}
