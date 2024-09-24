@@ -55,7 +55,7 @@ end
 
 print("\n")
 
-print("swimhub enviroment check")
+print("UNC Environment Check")
 print("✅ - Pass, ⛔ - Fail, ⏺️ - No test, ⚠️ - Missing aliases\n")
 
 task.defer(function()
@@ -66,11 +66,36 @@ task.defer(function()
 
 	print("\n")
 
-	print("swimhub summary")
-    print(rate==100 and "✅ swimhub is fully supported" or "⛔ swimhub is not fully supported")
+	print("UNC Summary")
+	print("✅ Tested with a " .. rate .. "% success rate (" .. outOf .. ")")
+	print("⛔ " .. fails .. " tests failed")
+	print("⚠️ " .. undefined .. " globals are missing aliases")
 end)
 
+getgenv().rate = math.round(passes / (passes + fails) * 100)
+
 -- Cache
+
+test("cache.invalidate", {}, function()
+	local container = Instance.new("Folder")
+	local part = Instance.new("Part", container)
+	cache.invalidate(container:FindFirstChild("Part"))
+	assert(part ~= container:FindFirstChild("Part"), "Reference `part` could not be invalidated")
+end)
+
+test("cache.iscached", {}, function()
+	local part = Instance.new("Part")
+	assert(cache.iscached(part), "Part should be cached")
+	cache.invalidate(part)
+	assert(not cache.iscached(part), "Part should not be cached")
+end)
+
+test("cache.replace", {}, function()
+	local part = Instance.new("Part")
+	local fire = Instance.new("Fire")
+	cache.replace(part, fire)
+	assert(part ~= fire, "Part was not replaced with Fire")
+end)
 
 test("cloneref", {}, function()
 	local part = Instance.new("Part")
@@ -139,6 +164,14 @@ end)
 
 test("getcallingscript", {})
 
+test("getscriptclosure", {"getscriptfunction"}, function()
+	local module = game:GetService("CoreGui").RobloxGui.Modules.Common.Constants
+	local constants = getrenv().require(module)
+	local generated = getscriptclosure(module)()
+	assert(constants ~= generated, "Generated module should not match the original")
+	assert(shallowEqual(constants, generated), "Generated constant table should be shallow equal to the original")
+end)
+
 test("hookfunction", {"replaceclosure"}, function()
 	local function test()
 		return true
@@ -186,6 +219,20 @@ test("newcclosure", {}, function()
 	assert(test ~= testC, "New C closure should not be same as the original")
 	assert(iscclosure(testC), "New C closure should be a C closure")
 end)
+
+-- Console
+
+test("rconsoleclear", {"consoleclear"})
+
+test("rconsolecreate", {"consolecreate"})
+
+test("rconsoledestroy", {"consoledestroy"})
+
+test("rconsoleinput", {"consoleinput"})
+
+test("rconsoleprint", {"consoleprint"})
+
+test("rconsolesettitle", {"rconsolename", "consolesettitle"})
 
 -- Crypt
 
@@ -453,9 +500,43 @@ end)
 
 test("dofile", {})
 
+-- Input
+
+test("isrbxactive", {"isgameactive"}, function()
+	assert(type(isrbxactive()) == "boolean", "Did not return a boolean value")
+end)
+
+test("mouse1click", {})
+
+test("mouse1press", {})
+
+test("mouse1release", {})
+
+test("mouse2click", {})
+
+test("mouse2press", {})
+
+test("mouse2release", {})
+
+test("mousemoveabs", {})
+
+test("mousemoverel", {})
+
+test("mousescroll", {})
+
+-- Instances
+
 test("fireclickdetector", {}, function()
 	local detector = Instance.new("ClickDetector")
 	fireclickdetector(detector, 50, "MouseHoverEnter")
+end)
+
+test("getcallbackvalue", {}, function()
+	local bindable = Instance.new("BindableFunction")
+	local function test()
+	end
+	bindable.OnInvoke = test
+	assert(getcallbackvalue(bindable, "OnInvoke") == test, "Did not return the correct value")
 end)
 
 test("getconnections", {}, function()
@@ -488,11 +569,22 @@ test("getcustomasset", {}, function()
 	assert(string.match(contentId, "rbxasset://") == "rbxasset://", "Did not return an rbxasset url")
 end)
 
+test("gethiddenproperty", {}, function()
+	local fire = Instance.new("Fire")
+	local property, isHidden = gethiddenproperty(fire, "size_xml")
+	assert(property == 5, "Did not return the correct value")
+	assert(isHidden == true, "Did not return whether the property was hidden")
+end)
+
 test("sethiddenproperty", {}, function()
 	local fire = Instance.new("Fire")
 	local hidden = sethiddenproperty(fire, "size_xml", 10)
 	assert(hidden, "Did not return true for the hidden property")
 	assert(gethiddenproperty(fire, "size_xml") == 10, "Did not set the hidden property")
+end)
+
+test("gethui", {}, function()
+	assert(typeof(gethui()) == "Instance", "Did not return an Instance")
 end)
 
 test("getinstances", {}, function()
@@ -503,6 +595,23 @@ test("getnilinstances", {}, function()
 	assert(getnilinstances()[1]:IsA("Instance"), "The first value is not an Instance")
 	assert(getnilinstances()[1].Parent == nil, "The first value is not parented to nil")
 end)
+
+test("isscriptable", {}, function()
+	local fire = Instance.new("Fire")
+	assert(isscriptable(fire, "size_xml") == false, "Did not return false for a non-scriptable property (size_xml)")
+	assert(isscriptable(fire, "Size") == true, "Did not return true for a scriptable property (Size)")
+end)
+
+test("setscriptable", {}, function()
+	local fire = Instance.new("Fire")
+	local wasScriptable = setscriptable(fire, "size_xml", true)
+	assert(wasScriptable == false, "Did not return false for a non-scriptable property (size_xml)")
+	assert(isscriptable(fire, "size_xml") == true, "Did not set the scriptable property")
+	fire = Instance.new("Fire")
+	assert(isscriptable(fire, "size_xml") == false, "⚠️⚠️ setscriptable persists between unique instances ⚠️⚠️")
+end)
+
+test("setrbxclipboard", {})
 
 -- Metatable
 
@@ -532,6 +641,12 @@ test("getnamecallmethod", {}, function()
 	assert(method == "GetService", "Did not get the correct method (GetService)")
 end)
 
+test("isreadonly", {}, function()
+	local object = {}
+	table.freeze(object)
+	assert(isreadonly(object), "Did not return true for a read-only table")
+end)
+
 test("setrawmetatable", {}, function()
 	local object = setmetatable({}, { __index = function() return false end, __metatable = "Locked!" })
 	local objectReturned = setrawmetatable(object, { __index = function() return true end })
@@ -550,6 +665,30 @@ test("setreadonly", {}, function()
 	assert(object.success, "Did not allow the table to be modified")
 end)
 
+-- Miscellaneous
+
+test("identifyexecutor", {"getexecutorname"}, function()
+	local name, version = identifyexecutor()
+	assert(type(name) == "string", "Did not return a string for the name")
+	return type(version) == "string" and "Returns version as a string" or "Does not return version"
+end)
+
+test("lz4compress", {}, function()
+	local raw = "Hello, world!"
+	local compressed = lz4compress(raw)
+	assert(type(compressed) == "string", "Compression did not return a string")
+	assert(lz4decompress(compressed, #raw) == raw, "Decompression did not return the original string")
+end)
+
+test("lz4decompress", {}, function()
+	local raw = "Hello, world!"
+	local compressed = lz4compress(raw)
+	assert(type(compressed) == "string", "Compression did not return a string")
+	assert(lz4decompress(compressed, #raw) == raw, "Decompression did not return the original string")
+end)
+
+test("messagebox", {})
+
 test("queue_on_teleport", {"queueonteleport"})
 
 test("request", {"http.request", "http_request"}, function()
@@ -562,6 +701,25 @@ test("request", {"http.request", "http_request"}, function()
 	local data = game:GetService("HttpService"):JSONDecode(response.Body)
 	assert(type(data) == "table" and type(data["user-agent"]) == "string", "Did not return a table with a user-agent key")
 	return "User-Agent: " .. data["user-agent"]
+end)
+
+test("setclipboard", {"toclipboard"})
+
+test("setfpscap", {}, function()
+	local renderStepped = game:GetService("RunService").RenderStepped
+	local function step()
+		renderStepped:Wait()
+		local sum = 0
+		for _ = 1, 5 do
+			sum += 1 / renderStepped:Wait()
+		end
+		return math.round(sum / 5)
+	end
+	setfpscap(60)
+	local step60 = step()
+	setfpscap(0)
+	local step0 = step()
+	return step60 .. "fps @60 • " .. step0 .. "fps @0"
 end)
 
 -- Scripts
@@ -584,6 +742,45 @@ test("getloadedmodules", {}, function()
 	assert(#modules > 0, "Did not return a table with any values")
 	assert(typeof(modules[1]) == "Instance", "First value is not an Instance")
 	assert(modules[1]:IsA("ModuleScript"), "First value is not a ModuleScript")
+end)
+
+test("getrenv", {}, function()
+	assert(_G ~= getrenv()._G, "The variable _G in the executor is identical to _G in the game")
+end)
+
+test("getrunningscripts", {}, function()
+	local scripts = getrunningscripts()
+	assert(type(scripts) == "table", "Did not return a table")
+	assert(#scripts > 0, "Did not return a table with any values")
+	assert(typeof(scripts[1]) == "Instance", "First value is not an Instance")
+	assert(scripts[1]:IsA("ModuleScript") or scripts[1]:IsA("LocalScript"), "First value is not a ModuleScript or LocalScript")
+end)
+
+test("getscriptbytecode", {"dumpstring"}, function()
+	local animate = game:GetService("Players").LocalPlayer.Character.Animate
+	local bytecode = getscriptbytecode(animate)
+	assert(type(bytecode) == "string", "Did not return a string for Character.Animate (a " .. animate.ClassName .. ")")
+end)
+
+test("getscripthash", {}, function()
+	local animate = game:GetService("Players").LocalPlayer.Character.Animate:Clone()
+	local hash = getscripthash(animate)
+	local source = animate.Source
+	animate.Source = "print('Hello, world!')"
+	task.defer(function()
+		animate.Source = source
+	end)
+	local newHash = getscripthash(animate)
+	assert(hash ~= newHash, "Did not return a different hash for a modified script")
+	assert(newHash == getscripthash(animate), "Did not return the same hash for a script with the same source")
+end)
+
+test("getscripts", {}, function()
+	local scripts = getscripts()
+	assert(type(scripts) == "table", "Did not return a table")
+	assert(#scripts > 0, "Did not return a table with any values")
+	assert(typeof(scripts[1]) == "Instance", "First value is not an Instance")
+	assert(scripts[1]:IsA("ModuleScript") or scripts[1]:IsA("LocalScript"), "First value is not a ModuleScript or LocalScript")
 end)
 
 test("getsenv", {}, function()
@@ -620,6 +817,36 @@ test("Drawing.Fonts", {}, function()
 	assert(Drawing.Fonts.System == 1, "Did not return the correct id for System")
 	assert(Drawing.Fonts.Plex == 2, "Did not return the correct id for Plex")
 	assert(Drawing.Fonts.Monospace == 3, "Did not return the correct id for Monospace")
+end)
+
+test("isrenderobj", {}, function()
+	local drawing = Drawing.new("Image")
+	drawing.Visible = true
+	assert(isrenderobj(drawing) == true, "Did not return true for an Image")
+	assert(isrenderobj(newproxy()) == false, "Did not return false for a blank table")
+end)
+
+test("getrenderproperty", {}, function()
+	local drawing = Drawing.new("Image")
+	drawing.Visible = true
+	assert(type(getrenderproperty(drawing, "Visible")) == "boolean", "Did not return a boolean value for Image.Visible")
+	local success, result = pcall(function()
+		return getrenderproperty(drawing, "Color")
+	end)
+	if not success or not result then
+		return "Image.Color is not supported"
+	end
+end)
+
+test("setrenderproperty", {}, function()
+	local drawing = Drawing.new("Square")
+	drawing.Visible = true
+	setrenderproperty(drawing, "Visible", false)
+	assert(drawing.Visible == false, "Did not set the value for Square.Visible")
+end)
+
+test("cleardrawcache", {}, function()
+	cleardrawcache()
 end)
 
 -- WebSocket
