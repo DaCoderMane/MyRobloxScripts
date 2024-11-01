@@ -1,7 +1,8 @@
 local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
 
 local Enabled = false
-local RandomFps = false
+local Rand1 = false
+local Rand2 = false
 local Fps = ""
 
 local Executor = getexecutorname()
@@ -44,7 +45,15 @@ Fps1:Toggle{
 	StartingState = false,
 	Description = "Changes your Fps to a random number 471 - 613 Fps",
 	Callback = function(bool)
-        RandomFps = bool
+        Rand1 = bool
+    end
+}
+Fps1:Toggle{
+	Name = "Random High Fps",
+	StartingState = false,
+	Description = "Changes your Fps to a random number 3712 - 5362 Fps",
+	Callback = function(bool)
+        Rand2 = bool
     end
 }
 Fps1:Textbox{
@@ -231,8 +240,12 @@ Fps4:Button{
 
 while true do
     if Enabled == true then
-        if RandomFps == true then
+        if Rand1 == true then
             MathRandom = math.random(471, 613)
+            game:GetService("ReplicatedStorage").FPSUpdateEventIKnowYouReCheater:FireServer(MathRandom)
+            wait(0.26)
+        elseif Rand2 == true then
+            MathRandom = math.random(3712, 5362)
             game:GetService("ReplicatedStorage").FPSUpdateEventIKnowYouReCheater:FireServer(MathRandom)
             wait(0.26)
         else
