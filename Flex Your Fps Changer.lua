@@ -3,6 +3,7 @@ local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeei
 local Enabled = false
 local Rand1 = false
 local Rand2 = false
+local InfFPS = false
 local Fps = ""
 
 local Executor = getexecutorname()
@@ -54,6 +55,14 @@ Fps1:Toggle{
 	Description = "Changes your Fps to a random number 3712 - 5362 Fps",
 	Callback = function(bool)
         Rand2 = bool
+    end
+}
+Fps1:Toggle{
+	Name = "Infinite FPS",
+	StartingState = false,
+	Description = "Changes your Fps to | math.huge",
+	Callback = function(bool)
+        InfFPS = bool
     end
 }
 Fps1:Textbox{
@@ -248,6 +257,9 @@ while true do
             MathRandom = math.random(3712, 5362)
             game:GetService("ReplicatedStorage").FPSUpdateEventIKnowYouReCheater:FireServer(MathRandom)
             wait(0.26)
+		elseif InfFPS == true then
+			game:GetService("ReplicatedStorage").FPSUpdateEventIKnowYouReCheater:FireServer(math.huge)
+            wait(0.01)
         else
             game:GetService("ReplicatedStorage").FPSUpdateEventIKnowYouReCheater:FireServer(Fps)
             wait(0.01)
