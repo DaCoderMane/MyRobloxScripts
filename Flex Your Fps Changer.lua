@@ -1,233 +1,233 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-
-local Executor = getexecutorname()
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
 
 local Enabled = false
 local RandomFps = false
 local Fps = ""
 
-local Window = Rayfield:CreateWindow({
-    Name = "Fps Changer | " .. Executor,
-    LoadingTitle = "Rayfield Interface Suite",
-    LoadingSubtitle = "by Cheezit",
-    ConfigurationSaving = {
-       Enabled = true,
-       FolderName = nil,
-       FileName = "Config"
-    },
-    Discord = {
-       Enabled = false,
-       Invite = "noinvitelink",
-       RememberJoins = true
-    },
-    KeySystem = true,
-    KeySettings = {
-       Title = "Fps Changer | Key System",
-       Subtitle = "Key System",
-       Note = "Get the key yourself bitch ass",
-       FileName = "KeyvyWevy",
-       SaveKey = true,
-       GrabKeyFromSite = false,
-       Key = {"Key"}
-    }
-})
+local Executor = getexecutorname()
 
-local Fps1 = Window:CreateTab("Fps Changer", 4483362458)
-local fps2 = Window:CreateTab("Fps Changer | Words", 4483362458)
-local fps3 = Window:CreateTab("Fps Changer | Sentances", 4483362458)
-local fps4 = Window:CreateTab("Fps Changer | Websites", 4483362458)
+local UI = Mercury:Create{
+    Name = "Mercury | "..Executor,
+    Size = UDim2.fromOffset(600, 350),
+    Theme = Mercury.Themes.Dark,
+    Link = "https://github.com/DaCoderMane"
+}
 
--- Toggle
-Fps1:CreateToggle({
-    Name = "Fps Changer",
-    CurrentValue = false,
-    Flag = "ChangerToggle",
-    Callback = function(bool)
+local Fps1 = UI:Tab{
+	Name = "Fps Changer",
+	Icon = "rbxassetid://8569322835"
+}
+local Fps2 = UI:Tab{
+	Name = "Word's",
+	Icon = "rbxassetid://8569322835"
+}
+local Fps3 = UI:Tab{
+	Name = "Sentance's",
+	Icon = "rbxassetid://8569322835"
+}
+local Fps4 = UI:Tab{
+	Name = "Website's",
+	Icon = "rbxassetid://8569322835"
+}
+
+-- Main Settings
+Fps1:Toggle{
+	Name = "Fps Changer",
+	StartingState = false,
+	Description = "Toggles the Fps Changer",
+	Callback = function(bool)
         Enabled = bool
-    end,
-})
-
-Fps1:CreateToggle({
-    Name = "Random high fps",
-    CurrentValue = false,
-    Flag = "ChangerToggle",
-    Callback = function(bool)
+    end
+}
+Fps1:Toggle{
+	Name = "Random High Fps",
+	StartingState = false,
+	Description = "Changes your Fps to a random number 471 - 613 Fps",
+	Callback = function(bool)
         RandomFps = bool
-    end,
-})
-
-Fps1:CreateInput({
-   Name = "Fps Text",
-   PlaceholderText = "Text here..",
-   RemoveTextAfterFocusLost = false,
-   Callback = function(input)
+    end
+}
+Fps1:Textbox{
+	Name = "Fps Text",
+    Description = "Changes your Fps to the given input",
+	Callback = function(input)
         Fps = input
-   end,
-})
+    end
+}
 
--- Presets | Words
-fps2:CreateButton({
-    Name = "KKK",
-    Callback = function()
+-- Word Presets
+Fps2:Button{
+	Name = "KKK",
+	Description = "Changes your Fps to | KKK",
+	Callback = function()
         Fps = "KKK"
-    end,
-})
-
-fps2:CreateButton({
-    Name = "9/11",
-    Callback = function()
+    end
+}
+Fps2:Button{
+	Name = "9/11",
+	Description = "Changes your Fps to | 9/11",
+	Callback = function()
         Fps = "9/11"
-    end,
-})
-
-fps2:CreateButton({
-    Name = "Nigger",
-    Callback = function()
+    end
+}
+Fps2:Button{
+	Name = "Nigger",
+	Description = "Changes your Fps to | Nigger",
+	Callback = function()
         Fps = "Nigger"
-    end,
-})
-
-fps2:CreateButton({
-    Name = "NiggerBeater",
-    Callback = function()
+    end
+}
+Fps2:Button{
+	Name = "NiggerBeater",
+	Description = "Changes your Fps to | NiggerBeater",
+	Callback = function()
         Fps = "NiggerBeater"
-    end,
-})
+    end
+}
+Fps2:Button{
+	Name = "Bitch",
+	Description = "Changes your Fps to | Bitch",
+	Callback = function()
+        Fps = "Bitch"
+    end
+}
 
--- Presets | Sentances
-fps3:CreateButton({
-    Name = "Adolf Hitler",
-    Callback = function()
+-- Sentance Presets
+Fps3:Button{
+	Name = "Adolf Hitler",
+	Description = "Changes your Fps to | Adolf Hitler",
+	Callback = function()
         Fps = "Adolf Hitler"
-    end,
-})
-
-fps3:CreateButton({
-    Name = "Hail hitler",
-    Callback = function()
+    end
+}
+Fps3:Button{
+	Name = "Hail hitler",
+	Description = "Changes your Fps to | Hail hitler",
+	Callback = function()
         Fps = "Hail hitler"
-    end,
-})
-
-fps3:CreateButton({
-    Name = "Kill the niggers",
-    Callback = function()
+    end
+}
+Fps3:Button{
+	Name = "Kill the niggers",
+	Description = "Changes your Fps to | Kill the niggers",
+	Callback = function()
         Fps = "Kill the niggers"
-    end,
-})
-
-fps3:CreateButton({
-    Name = "ALLAH AHKBAR",
-    Callback = function()
+    end
+}
+Fps3:Button{
+	Name = "ALLAH AHKBAR",
+	Description = "Changes your Fps to | ALLAH AHKBAR",
+	Callback = function()
         Fps = "ALLAH AHKBAR"
-    end,
-})
-
-fps3:CreateButton({
-    Name = "Pearl Harbor",
-    Callback = function()
+    end
+}
+Fps3:Button{
+	Name = "Pearl Harbor",
+	Description = "Changes your Fps to | Pearl Harbor",
+	Callback = function()
         Fps = "Pearl Harbor"
-    end,
-})
-
-fps3:CreateButton({
-    Name = "Kill the jews",
-    Callback = function()
+    end
+}
+Fps3:Button{
+	Name = "Kill the jews",
+	Description = "Changes your Fps to | Kill the jews",
+	Callback = function()
         Fps = "Kill the jews"
-    end,
-})
-
-fps3:CreateButton({
-    Name = "Sir, they hit the second tower..",
-    Callback = function()
+    end
+}
+Fps3:Button{
+	Name = "Sir, they hit the second tower..",
+	Description = "Changes your Fps to | Sir, they hit the second tower..",
+	Callback = function()
         Fps = "Sir, they hit the second tower.."
-    end,
-})
-
-fps3:CreateButton({
-    Name = "DOWN WITH THE TOWERS",
-    Callback = function()
+    end
+}
+Fps3:Button{
+	Name = "DOWN WITH THE TOWERS",
+	Description = "Changes your Fps to | DOWN WITH THE TOWERS",
+	Callback = function()
         Fps = "DOWN WITH THE TOWERS"
-    end,
-})
-
-fps3:CreateButton({
-    Name = "Big oily breasts massaging your long cock",
-    Callback = function()
+    end
+}
+Fps3:Button{
+	Name = "Big oily breasts massaging your long cock",
+	Description = "Changes your Fps to | Big oily breasts massaging your long cock",
+	Callback = function()
         Fps = "Big oily breasts massaging your long cock"
-    end,
-})
+    end
+}
 
--- Presets | Websites
-fps4:CreateButton({
-    Name = "pornhub.com",
-    Callback = function()
+-- Website Presets
+Fps4:Button{
+	Name = "pornhub.com",
+	Description = "Changes your Fps to | pornhub.com",
+	Callback = function()
         Fps = "pornhub.com"
-    end,
-})
-
-fps4:CreateButton({
-    Name = "xvideos.com",
-    Callback = function()
+    end
+}
+Fps4:Button{
+	Name = "xvideos.com",
+	Description = "Changes your Fps to | xvideos.com",
+	Callback = function()
         Fps = "xvideos.com"
-    end,
-})
-
-fps4:CreateButton({
-    Name = "xhamster.com",
-    Callback = function()
+    end
+}
+Fps4:Button{
+	Name = "xhamster.com",
+	Description = "Changes your Fps to | xhamster.com",
+	Callback = function()
         Fps = "xhamster.com"
-    end,
-})
-
-fps4:CreateButton({
-    Name = "onlyfans.com",
-    Callback = function()
+    end
+}
+Fps4:Button{
+	Name = "onlyfans.com",
+	Description = "Changes your Fps to | onlyfans.com",
+	Callback = function()
         Fps = "onlyfans.com"
-    end,
-})
-
-fps4:CreateButton({
-    Name = "hotasianmilfs.com",
-    Callback = function()
+    end
+}
+Fps4:Button{
+	Name = "hotasianmilfs.com",
+	Description = "Changes your Fps to | hotasianmilfs.com",
+	Callback = function()
         Fps = "hotasianmilfs.com"
-    end,
-})
-
-fps4:CreateButton({
-    Name = "hentaihaven.xxx",
-    Callback = function()
+    end
+}
+Fps4:Button{
+	Name = "hentaihaven.xxx",
+	Description = "Changes your Fps to | hentaihaven.xxx",
+	Callback = function()
         Fps = "hentaihaven.xxx"
-    end,
-})
-
-fps4:CreateButton({
-    Name = "hentai.tv",
-    Callback = function()
+    end
+}
+Fps4:Button{
+	Name = "hentai.tv",
+	Description = "Changes your Fps to | hentai.tv",
+	Callback = function()
         Fps = "hentai.tv"
-    end,
-})
-
-fps4:CreateButton({
-    Name = "hanime.tv",
-    Callback = function()
+    end
+}
+Fps4:Button{
+	Name = "hanime.tv",
+	Description = "Changes your Fps to | hanime.tv",
+	Callback = function()
         Fps = "hanime.tv"
-    end,
-})
-
-fps4:CreateButton({
-    Name = "hentaicity.com",
-    Callback = function()
+    end
+}
+Fps4:Button{
+	Name = "hentaicity.com",
+	Description = "Changes your Fps to | hentaicity.com",
+	Callback = function()
         Fps = "hentaicity.com"
-    end,
-})
-
-fps4:CreateButton({
-    Name = "hentaidude.com",
-    Callback = function()
+    end
+}
+Fps4:Button{
+	Name = "hentaidude.com",
+	Description = "Changes your Fps to | hentaidude.com",
+	Callback = function()
         Fps = "hentaidude.com"
-    end,
-})
+    end
+}
 
 while true do
     if Enabled == true then
